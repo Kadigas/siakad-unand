@@ -14,11 +14,11 @@ class Modul extends Model
     // set timestamps ke false
     public $timestamps = false;
 
-    public function dosen(){
-        return $this->belongsToMany(Dosen::class);
+    public static function dosen(){
+        return (new static)->belongsToMany(Dosen::class);
     }
 
-    public function mahasiswa(){
-        return $this->belongsToMany(Mahasiswa::class);
+    public static function mahasiswa(){
+        return (new static)->belongsToMany(Mahasiswa::class);
     }
 }
