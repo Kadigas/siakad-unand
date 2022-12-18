@@ -28,4 +28,12 @@ class Dosen extends Model
     public function timeline(){
         return $this->belongsToMany(Timeline::class);
     }
+
+    public static function mahasiswa_bimbingan(){
+        return (new static)::with('modul.mahasiswa');
+    }
+
+    public static function mahasiswa_bimbingan_dosen($id_dosen){
+        return (new static)::where('id', $id_dosen)->with('modul.mahasiswa');
+    }
 }
