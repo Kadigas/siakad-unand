@@ -75,7 +75,7 @@ class AdminController extends Controller
             'password' => $request->password
         ];
 
-        if(Auth::attempt($loginInformation) && (int)$request->name < 502520000 && (int)$request->name >= 502500000){
+        if(Auth::attempt($loginInformation) && (int)$request->name < 502500000){
             return redirect('/admin');
         }
         else{
