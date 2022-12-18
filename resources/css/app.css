@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  --color-primary: #209636;
+  --color-primary2: #40c15733;
+  --color-primary3: #ffffffcc;
+  --color-secondary: #3a708a;
+  --color-success: #198754;
+  --color-info: #0dcaf0;
+  --color-warning: #fd7e14;
+  --color-danger: #dc3545;
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --body-bg-color: #e4e4e4;
+  --body-text-color: #212529;
+  --body-link-color: #204397;
+  --body-link-hover-color: #c8475b;
+  --mainnav-text-color: #0d6d08;
+  --mainnav-link-color: #0d6d08;
+  --mainnav-link-hover-color: #aeb1b8;
+  --mainnav-link-active-color: #969ca4;
+  --drawer-color: #222D31;
+  --footer-bg-color: #126638;
+  --footer-text-color: rgba(255, 255, 255, 0.5);
+  --footer-link-color: #ffffff;
+  --footer-link-hover-color: #eae2e2;
+}
+
+
+body {
+  background-color: #F1F1EF;
+  animation: fadeInAnimation ease 0.75s;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
