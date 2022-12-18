@@ -3,10 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Modul;
+use App\Models\Administrator;
+use App\Models\Dosen;
+use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ModulController extends Controller
 {
+    function index(){
+        $user = Mahasiswa::where('user_id', Auth::id())->first();
+        if($user){
+            return view('mhs.modul');
+        }
+        $user = Dosen::where('user_id', Auth::id())->first();
+        if($user){
+            return view('dosen.modul');
+        }
+        $user = Administrator::where('user_id', Auth::id())->first();
+        if($user){
+            return view('admin.modul');
+        }
+    }
+
     public function create(Request $request)
     {
         $request->validate([
@@ -63,6 +82,6 @@ class ModulController extends Controller
         } else {
             $modul = Modul::dosen()->where('dosen.id', $request->userId)->pluck('modul.id', 'modul.nama', 'modul.semester', 'modul.lokasi');
         }
-        return $modul
+        return $modul;
     }
 }
