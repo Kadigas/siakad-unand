@@ -14,6 +14,11 @@ class Mahasiswa extends Model
     // set timestamps ke false
     public $timestamps = false;
     
+    public function user()
+    {
+         return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
     public function modul(){
         return $this->belongsToMany(Modul::class);
     }

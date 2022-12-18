@@ -14,6 +14,13 @@ class Dosen extends Model
     // set timestamps ke false
     public $timestamps = false;
 
+    protected $fillable = ['nama', 'user_id'];
+
+    public function user()
+     {
+         return $this->belongsTo('App\Models\User', 'user_id');
+     }
+
     public function modul(){
         return $this->belongsToMany(Modul::class);
     }

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('nama')->unique();
             $table->integer('angkatan');
             $table->decimal('IPK', $precision = 4, $scale = 2);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

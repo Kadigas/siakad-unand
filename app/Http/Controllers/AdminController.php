@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Models\Administrator;
 use App\Models\User;
-use App\Models\Mahasiswa;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-class MahasiswaController extends Controller
+
+class AdminController extends Controller
 {
     public function index()
     {
-        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
-        return view('mhs.index', compact('mhs'));
+        $admin = Administrator::where('user_id', Auth::id())->first();
+        return view('admin.index', compact('admin'));
     }
 
     public function register(){
-        return view('mhs.register');
+        return view('admin.register');
     }
+
     public function create(Request $request){
         Session::flash('name', $request->name);
         Session::flash('name', $request->name);
@@ -56,7 +57,7 @@ class MahasiswaController extends Controller
         }
     }
     public function login(){
-        return view('mhs.login');
+        return view('admin.login');
     }
     
     public function signin(Request $request){
@@ -74,11 +75,11 @@ class MahasiswaController extends Controller
             'password' => $request->password
         ];
 
-        if(Auth::attempt($loginInformation) && (int)$request->name >= 502520000){
-            return redirect('/mhs');
+        if(Auth::attempt($loginInformation) && (int)$request->name < 502520000 && (int)$request->name >= 502500000){
+            return redirect('/admin');
         }
         else{
-            return redirect('/mhs/login')->withErrors('Username or Password is not valid.');
+            return redirect('/admin/login')->withErrors('Username or Password is not valid.');
         }
     }
     public function logout(){

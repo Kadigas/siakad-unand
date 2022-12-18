@@ -20,10 +20,10 @@
             @endforeach
             <div class='card'>
                 <h1 class='title'>Login</h1>
-                <form action="/mhs/signin" method='post' class='mx-8'>
+                <form action="/dosen/signin" method='post' class='mx-8'>
                     @csrf
-                    <label htmlFor="name" class='placeholder'>Student ID: </label>
-                    <input type="text" name="name" value='{{Session::get('name')}}' placeholder="Enter your student ID..." size=54 class='mb-5 p-1'/>
+                    <label htmlFor="name" class='placeholder'>Lecturer ID: </label>
+                    <input type="text" name="name" value='{{Session::get('name')}}' placeholder="Enter your lecturer ID..." size=54 class='mb-5 p-1'/>
                     <label htmlFor="password" class='placeholder'>Password: </label>
                     <input type="password" name="password" placeholder="Password..." size=54 class='mb-5 p-1'/>
                     <div class='flex flex-row'>
