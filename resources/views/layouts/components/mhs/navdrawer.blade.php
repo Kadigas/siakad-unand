@@ -18,5 +18,10 @@
                     <li class='my-2'><a href='/mahasiswa/modul/03'>Modul 3</a></li>
                 </ul>
             </div>
+            <div>
+                <a href ='/session/logout' class="w-full bg-red-500 duration-300 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
+                    Logout
+                </a>
+            </div>
         </div>
     </div>

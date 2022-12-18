@@ -15,12 +15,14 @@
         <div>
             @foreach ($errors->all() as $error)
 
-            <div class="flex flex-col align-center font-semibold bg-red-500">{{ $error }}</div>
+            <div class="flex flex-col align-center font-semibold bg-red-500 rounded my-2">
+                <p class="mx-3 my-2">{{ $error }}</p>
+            </div>
 
             @endforeach
             <div class='card'>
                 <h1 class='title'>Login</h1>
-                <form action="/mhs/signin" method='post' class='mx-8'>
+                <form action="/session/signin" method='post' class='mx-8'>
                     @csrf
                     <label htmlFor="name" class='placeholder'>Student ID: </label>
                     <input type="text" name="name" value='{{Session::get('name')}}' placeholder="Enter your student ID..." size=54 class='mb-5 p-1'/>
