@@ -12,8 +12,10 @@
                     <li class='my-2'><a href='/dosen/presensi-bimbingan'><i class='fa fa-check-square-o mx-2'></i>Presensi Bimbingan</a></li>
                 </ul>
             </div>
-            <a href ='/session/logout'class="w-full bg-red-500 duration-300 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
-                Logout
-            </a>
+            <div class="my-5 flex flex-row justify-center">
+                <a href ='/session/logout'class="w-full bg-red-500 duration-300 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded flex flex-row justify-center">
+                    Logout
+                </a>
+            </div>
         </div>
     </div>r

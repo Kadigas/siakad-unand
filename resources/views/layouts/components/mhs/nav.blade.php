@@ -7,7 +7,7 @@
             <a href='#' class='font-semibold mx-5'>Panduan Mahasiswa</a>
         </div>
         <div class='basis-5/6 mx-5 flex flex-row justify-end'>
-            <span class='font-semibold mx-2'>Nopal Pardede</span>
+            <span class='font-semibold mx-2'>{{ $mhs->nama }}</span>
             <span class='fa fa-user-circle-o text-2xl mx-5'></span>
         </div>
     </div>
