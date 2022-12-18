@@ -13,6 +13,8 @@ class Mahasiswa extends Model
 
     // set timestamps ke false
     public $timestamps = false;
+
+    protected $fillable = ['nama', 'angkatan', 'ipk', 'user_id'];
     
     public function user()
     {
