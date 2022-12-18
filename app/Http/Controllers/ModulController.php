@@ -75,13 +75,13 @@ class ModulController extends Controller
     
     public function retrieve_owned(Request $request)
     {
-        $userType = $request->userType;
-        $userId = $request->userId;
-        if($userType == 'mahasiswa') {
-            $modul = Modul::mahasiswa()->where('mahasiswa.id', $request->userId)->pluck('modul.id', 'modul.nama', 'modul.semester', 'modul.lokasi');
-        } else {
-            $modul = Modul::dosen()->where('dosen.id', $request->userId)->pluck('modul.id', 'modul.nama', 'modul.semester', 'modul.lokasi');
+        $user = Mahasiswa::where('user_id', Auth::id())->first();
+        if($user){
+            return $modul = Modul::mahasiswa()->where('mahasiswa.id', $request->userId)->pluck('modul.id', 'modul.nama', 'modul.semester', 'modul.lokasi');
         }
-        return $modul;
+        $user = Dosen::where('user_id', Auth::id())->first();
+        if($user) {
+            return $modul = Modul::dosen()->where('dosen.id', $request->userId)->pluck('modul.id', 'modul.nama', 'modul.semester', 'modul.lokasi');
+        }
     }
 }
