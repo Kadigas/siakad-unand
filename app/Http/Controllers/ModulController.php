@@ -47,6 +47,13 @@ class ModulController extends Controller
         Modul::create($modulData);
     }
 
+    public function show($id)
+    {
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+        $modul = Modul::findorfail($id);
+        return view('mhs.modul.show', compact('mhs', 'modul'));
+    }
+
     public function delete(Request $request)
     {
         Modul::find($request->modulId)->delete();

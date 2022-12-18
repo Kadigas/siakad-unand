@@ -16,5 +16,21 @@ class MahasiswaController extends Controller
         $mhs = Mahasiswa::where('user_id', Auth::id())->first();
         return view('mhs.index', compact('mhs'));
     }
+    public function logbook(){
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+        return view('mhs.logbook.index', compact('mhs'));
+    }
+    public function tugas(){
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+        return view('mhs.tugas.index', compact('mhs'));
+    }
+    public function modul(){
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+        return view('mhs.tugas.index', compact('mhs'));
+    }
+
+    public function show(){
+        
+    }
 
 }

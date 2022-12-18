@@ -21,6 +21,12 @@ Route::get('/', function () {
 });
 
 Route::get('/mhs', [MahasiswaController::class, 'index'])->middleware('isLogin');
+Route::get('/mhs/logbook', [MahasiswaController::class, 'logbook'])->middleware('isLogin');
+Route::get('/mhs/tugas', [MahasiswaController::class, 'tugas'])->middleware('isLogin');
+
+Route::get('/mhs/modul/{id}', [ModulController::class, 'show'])->middleware('isLogin');
+
+Route::resource('mhs', MahasiswaController::class)->middleware('isLogin');
 
 Route::get('/dosen', [DosenController::class, 'index'])->middleware('isLogin');
 
