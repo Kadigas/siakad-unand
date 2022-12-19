@@ -14,14 +14,16 @@
     @push('styles')
     <link rel="stylesheet" href="{{asset('/css/pages/profile.css')}}">
     @endpush
+    
     <div class='flex flex-row justify-center mt-12'>
         <img src="{{asset('/images/user.png')}}" alt="Home" width=500 height=500 class='my-4'/>
         <div class='flex flex-row justify-center my-2'>
             <div class='card-content'>
                 <h1 class='text-2xl font-bold text-left'>Profile</h1>
-                <form action="" method='' class='mx-8 text-xl my-6'>
-                    <label htmlFor="uid">UNAND ID: </label>
-                    <input type="text" name="uid" placeholder="UNAND ID..." value={{$mhs->user->name}} size=25 class='flex flex-col border-solid border-2 my-4 px-2'/>
+                <form action="/mhs/edit_profile" method='post' class='mx-8 text-xl my-6'>
+                    @csrf
+                    <h2>UNAND ID: </label>
+                    <h2 size=25 class='flex flex-col my-4 px-2'>{{$mhs->user->name}}<h2>
                     <label htmlFor="nama">Nama: </label>
                     <input type="text" name="nama" placeholder="Nama..." size=25 value="{{$mhs->nama}}" class='flex flex-col border-solid border-2 my-4 px-2'/>
                     <div class='flex flex-row'>

@@ -33,4 +33,20 @@ class MahasiswaController extends Controller
         
     }
 
+    public function changeName(Request $request)
+    {
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+
+        $request->validate([
+            'nama' => 'required',
+        ],[
+            'nama.required' => 'Name cannot be empty'
+        ]);
+
+        $mhs->update([
+            'nama' => $request->nama
+        ]);
+        return view('mhs.index', compact('mhs'));
+    }
+
 }
