@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/mhs', [MahasiswaController::class, 'index'])->middleware('isLogin');
 Route::get('/mhs/logbook', [MahasiswaController::class, 'logbook'])->middleware('isLogin');
 Route::get('/mhs/tugas', [MahasiswaController::class, 'tugas'])->middleware('isLogin');
-Route::post('/mhs/edit_profile', [MahasiswaController::class, 'changeName'])->middleware('isLogin');
+Route::post('/mhs/edit_profile', [MahasiswaController::class, 'update'])->middleware('isLogin');
 
 Route::get('/mhs/modul/{id}', [ModulController::class, 'show'])->middleware('isLogin');
 Route::get('/mhs/presensi', [PresensiController::class, 'index'])->middleware('isLogin');

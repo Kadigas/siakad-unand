@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 class MahasiswaController extends Controller
 {
@@ -33,20 +34,23 @@ class MahasiswaController extends Controller
         
     }
 
-    public function changeName(Request $request)
+    public function update(Request $request)
     {
         $mhs = Mahasiswa::where('user_id', Auth::id())->first();
 
         $request->validate([
             'nama' => 'required',
+            'angkatan' => 'required'
         ],[
-            'nama.required' => 'Name cannot be empty'
+            'nama.required' => 'Name cannot be empty',
+            'angkatan.required' => 'Angkatan cannot be empty'
         ]);
 
         $mhs->update([
-            'nama' => $request->nama
+            'nama' => $request->nama,
+            'angkatan' => $request->angkatan
         ]);
-        return view('mhs.index', compact('mhs'));
+        return Redirect::back();
     }
 
 }

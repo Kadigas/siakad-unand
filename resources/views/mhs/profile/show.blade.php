@@ -26,6 +26,8 @@
                     <h2 size=25 class='flex flex-col my-4 px-2'>{{$mhs->user->name}}<h2>
                     <label htmlFor="nama">Nama: </label>
                     <input type="text" name="nama" placeholder="Nama..." size=25 value="{{$mhs->nama}}" class='flex flex-col border-solid border-2 my-4 px-2'/>
+                    <label htmlFor="angkatan">Angkatan: </label>
+                    <input type="text" name="angkatan" placeholder="Angkatan..." size=25 value="{{$mhs->angkatan}}" class='flex flex-col border-solid border-2 my-4 px-2'/>
                     <div class='flex flex-row'>
                         <button type="submit" name="submit" class="transition duration-200 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer mt-5">
                             Edit
