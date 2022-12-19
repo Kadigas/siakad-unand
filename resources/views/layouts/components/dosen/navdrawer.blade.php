@@ -9,7 +9,7 @@
                     <li class='my-2'><a href='/dosen/pengelolaan-nilai'><i class='fa fa-address-book mx-2'></i>Pengelolaan Nilai</a></li>
                     <li class='my-2'><a href='/dosen/tugas-mahasiswa/1'><i class='fa fa-file mx-2'></i>Tugas Mahasiswa</a></li>
                     <li class='my-2'><a href='/dosen/diskusi-bimbingan'><i class='fa fa-comment mx-2'></i>Diskusi Bimbingan</a></li>
-                    <li class='my-2'><a href='/dosen/presensi-bimbingan'><i class='fa fa-check-square-o mx-2'></i>Presensi Bimbingan</a></li>
+                    <li class='my-2'><a href='/dosen/presensi'><i class='fa fa-check-square-o mx-2'></i>Presensi Bimbingan</a></li>
                 </ul>
             </div>
             <div class="my-5 flex flex-row justify-center">
