@@ -19,8 +19,9 @@
         <!-- Main Content -->
         <div class='flex flex-row'>
             <div class="basis-1/6 h-screen sticky top-0">@yield('navdrawer')</div>
-            <div class="basis-4/6 mt-12">
+            <div class="basis-4/6 mt-12 flex flex-col justify-between">
                 @yield('content')
+                @include('layouts.components.footer')
             </div>
             <div class="basis-1/6 h-screen sticky top-0">@yield('activities')</div>
         </div>

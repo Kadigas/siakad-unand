@@ -28,4 +28,16 @@ class Mahasiswa extends Model
     public function timeline(){
         return $this->belongsToMany(Timeline::class);
     }
+
+    public function tugas(){
+        return $this->belongsToMany(Modul::class);
+    }
+
+    public function ips(){
+        return $this->belongsToMany(IPS::class);
+    }
+
+    public function logbook(){
+        return $this->belongsToMany(Logbook::class);
+    }
 }

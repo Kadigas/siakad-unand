@@ -10,4 +10,9 @@ class Tugas extends Model
     use HasFactory;
 
     protected $table = "tugas";
+    protected $fillable = ['nilai', 'jenis', 'dosen_id', 'modul_id', 'mahasiswa_id'];
+
+    public function mahasiswa(){
+        return $this->belongsTo(Mahasiswa::class);
+    }
 }

@@ -54,7 +54,7 @@ class SessionController extends Controller
         }
     }
     public function login(){
-        return view('mhs.login');
+        return view('login');
     }
     
     public function signin(Request $request){

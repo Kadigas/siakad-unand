@@ -13,4 +13,12 @@ class Logbook extends Model
 
     // set timestamps ke false
     public $timestamps = false;
+
+    public function mahasiswa(){
+        return $this->belongsTo(Mahasiswa::class);
+    }
+
+    public function modul(){
+        return $this->belongsTo(Mahasiswa::class);
+    }
 }
