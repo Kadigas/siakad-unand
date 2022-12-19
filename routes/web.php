@@ -25,10 +25,18 @@ Route::get('/mhs/logbook', [MahasiswaController::class, 'logbook'])->middleware(
 Route::get('/mhs/tugas', [MahasiswaController::class, 'tugas'])->middleware('isLogin');
 
 Route::get('/mhs/modul/{id}', [ModulController::class, 'show'])->middleware('isLogin');
+Route::get('/mhs/presensi', [PresensiController::class, 'index'])->middleware('isLogin');
+Route::get('/mhs/modul/{id}/tugas/{tid}', [TugasController::class, 'show'])->middleware('isLogin');
 
 Route::resource('mhs', MahasiswaController::class)->middleware('isLogin');
 
 Route::get('/dosen', [DosenController::class, 'index'])->middleware('isLogin');
+Route::get('/dosen/data-mahasiswa', [DosenController::class, 'datamhs'])->middleware('isLogin');
+Route::get('/dosen/pengelolaan-nilai', [DosenController::class, 'pnilai'])->middleware('isLogin');
+Route::get('/dosen/pengisian-nilai', [DosenController::class, 'pengisian_nilai'])->middleware('isLogin');
+Route::post('/dosen/simpan-nilai', [TugasController::class, 'store'])->middleware('isLogin');
+Route::get('/dosen/timeline', [TimelineController::class, 'index'])->middleware('isLogin');
+Route::get('/dosen/tugas-mahasiswa/{id}', [TugasController::class, 'showD'])->middleware('isLogin');
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware('isLogin');
 

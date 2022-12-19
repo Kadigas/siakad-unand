@@ -26,11 +26,11 @@
                         </div>
                         <div class='my-2'>
                             <li class='text-sm'>Deadline 23/06/2022</li>
-                            <h3 class='font-semibold text-md'>Modul 3: Tugas 1</h3>
+                            <h3 class='font-semibold text-md'>Modul 3: Tugas 2</h3>
                         </div>
                         <div class='my-2'>
                             <li class='text-sm'>Deadline 01/07/2022</li>
-                            <h3 class='font-semibold text-md'>Modul 2: Tugas 1</h3>
+                            <h3 class='font-semibold text-md'>Modul 2: Tugas 2</h3>
                         </div>
                     </ul>
                 </div>

@@ -33,5 +33,35 @@ class UserTableSeeders extends Seeder
             'email'=>"000000001@mail.com",
             'password'=>Hash::make('123456'),
         ]);
+        
+        DB::table('users')->insert([
+            'name'=>'5025200002',
+            'email'=>"502520002@mail.com",
+            'password'=>Hash::make('123456'),
+        ]);
+
+        DB::table('users')->insert([
+            'name'=>'5025200003',
+            'email'=>"502520003@mail.com",
+            'password'=>Hash::make('123456'),
+        ]);
+
+        DB::table('users')->insert([
+            'name'=>'5025200004',
+            'email'=>"502520004@mail.com",
+            'password'=>Hash::make('123456'),
+        ]);
+
+        DB::table('users')->insert([
+            'name'=>'5025200005',
+            'email'=>"502520005@mail.com",
+            'password'=>Hash::make('123456'),
+        ]);
+
+        DB::table('users')->insert([
+            'name'=>'5025200006',
+            'email'=>"502520006@mail.com",
+            'password'=>Hash::make('123456'),
+        ]);
     }
 }

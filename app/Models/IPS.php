@@ -9,8 +9,13 @@ class IPS extends Model
 {
     use HasFactory;
 
-    protected $table = "ips";
+    protected $table = "_i_p_s";
 
     // set timestamps ke false
     public $timestamps = false;
+
+    public function mahasiswa(){
+        return $this->belongsTo(Mahasiswa::class);
+    }
+
 }

@@ -22,15 +22,15 @@
             <h1 class='text-2xl font-bold text-left mb-2'>Tugas Ongoing</h1>
             <ul class='list-disc mx-2 my-2 divide-y-4 divide-solid'>
               <li class='my-5'>
-                  <a href='/mhs/modul/01/tugas/2'><h1 class='font-semibold text-lg'>Modul 1: Tugas 2</h1></a>
+                  <a href='/mhs/modul/1/tugas/2'><h1 class='font-semibold text-lg'>Modul 1: Tugas 2</h1></a>
                   <h2>Deadline 21/06/2022</h2>
               </li>
               <li class='my-5'>
-                  <a href='/mhs/modul/03/tugas/1'><h1 class='font-semibold text-lg'>Modul 3: Tugas 1</h1></a>
+                  <a href='/mhs/modul/3/tugas/2'><h1 class='font-semibold text-lg'>Modul 3: Tugas 2</h1></a>
                   <h2>Deadline 23/06/2022</h2>
               </li>
               <li class='my-5'>
-                  <a href='/mhs/modul/02/tugas/1'><h1 class='font-semibold text-lg'>Modul 2: Tugas 1</h1></a>
+                  <a href='/mhs/modul/2/tugas/2'><h1 class='font-semibold text-lg'>Modul 2: Tugas 2</h1></a>
                   <h2>Deadline 01/07/2022</h2>
               </li>
             </ul>

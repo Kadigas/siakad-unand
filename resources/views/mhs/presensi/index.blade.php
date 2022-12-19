@@ -15,21 +15,13 @@
     <link rel="stylesheet" href="{{asset('/css/pages/main.css')}}">
     @endpush
     <div class='flex flex-row justify-center mt-12'>
-        <h1 class='text-6xl font-bold mt-6'>{{ $modul->nama }}</h1>
+        <img src="{{asset('/images/Presence.png')}}" alt="Home" width=800 height=800 class='mt-4'/>
     </div>
     <div class='flex flex-row justify-center my-2'>
         <div class='card-content'>
-            <h1 class='text-2xl font-bold text-left mb-2'>Tugas Ongoing</h1>
-              <ul class='list-disc mx-2 my-2 divide-y-4 divide-solid'>
-                <li class='my-5'>
-                    <a href='/mhs/modul/1/tugas/2'><h1 class='font-semibold text-lg'>Tugas 2</h1></a>
-                    <h2>Not Submitted</h2>
-                </li>
-                <li class='my-5'>
-                    <a href='/mhs/modul/1/tugas/3'><h1 class='font-semibold text-lg'>Tugas 3</h1></a>
-                    <h2>Not Submitted</h2>
-                </li>
-              </ul>
+            <div class='flex flex-col align-center my-2 mx-12'>
+                <a class='bg-blue-700 duration-150 mx-12 text-white font-bold py-2 px-4 rounded flex flex-col items-center hover:bg-blue-900' href='#'>Presensi</a>
+              </div>
         </div>
     </div>
 @endsection

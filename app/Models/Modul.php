@@ -21,4 +21,8 @@ class Modul extends Model
     public static function mahasiswa(){
         return (new static)->belongsToMany(Mahasiswa::class);
     }
+
+    public static function logbook(){
+        return (new static)->belongsToMany(Logbook::class);
+    }
 }

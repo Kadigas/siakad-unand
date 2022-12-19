@@ -12,17 +12,17 @@ use Illuminate\Support\Facades\Auth;
 class PresensiController extends Controller
 {
     function index(){
-        $user = Mahasiswa::where('user_id', Auth::id())->first();
-        if($user){
-            return view('mhs.presensi');
+        $mhs = Mahasiswa::where('user_id', Auth::id())->first();
+        if($mhs){
+            return view('mhs.presensi.index', compact('mhs'));
         }
-        $user = Dosen::where('user_id', Auth::id())->first();
-        if($user){
-            return view('dosen.presensi');
+        $dosen = Dosen::where('user_id', Auth::id())->first();
+        if($dosen){
+            return view('dosen.presensi.index', compact('dosen'));
         }
-        $user = Administrator::where('user_id', Auth::id())->first();
-        if($user){
-            return view('admin.presensi');
+        $admin = Administrator::where('user_id', Auth::id())->first();
+        if($admin){
+            return view('admin.presensi.index', compact('admin'));
         }
     }
 
