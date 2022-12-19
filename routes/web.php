@@ -41,6 +41,7 @@ Route::get('/dosen/timeline', [TimelineController::class, 'index'])->middleware(
 Route::get('/dosen/tugas-mahasiswa/{id}', [TugasController::class, 'showD'])->middleware('isLogin');
 Route::get('/dosen/presensi', [PresensiController::class, 'index'])->middleware('isLogin');
 Route::get('/dosen/profile', [ProfileController::class, 'show'])->middleware('isLogin');
+Route::post('/dosen/edit_profile', [DosenController::class, 'changeName'])->middleware('isLogin');
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware('isLogin');
 

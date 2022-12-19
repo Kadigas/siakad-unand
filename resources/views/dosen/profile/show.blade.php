@@ -19,10 +19,10 @@
         <div class='flex flex-row justify-center my-2'>
             <div class='card-content'>
                 <h1 class='text-2xl font-bold text-left'>Profile</h1>
-                <form action="" method='' class='mx-8 text-xl my-6'>
-                    <label htmlFor="uid">UNAND ID: </label>
-                    <input type="text" name="uid" placeholder="UNAND ID..." value={{$dosen->user->name}} size=25 class='flex flex-col border-solid border-2 my-4 px-2'/>
-                    <label htmlFor="nama">Nama: </label>
+                <form action="/dosen/edit_profile" method='post' class='mx-8 text-xl my-6'>
+                    @csrf
+                    <h2>UNAND ID: </label>
+                    <h2 size=25 class='flex flex-col my-4 px-2'>{{$dosen->user->name}}<h2><label htmlFor="nama">Nama: </label>
                     <input type="text" name="nama" placeholder="Nama..." size=25 value="{{$dosen->nama}}" class='flex flex-col border-solid border-2 my-4 px-2'/>
                     <div class='flex flex-row'>
                         <button type="submit" name="submit" class="transition duration-200 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded cursor-pointer mt-5">

@@ -37,5 +37,20 @@ class DosenController extends Controller
         $mhs = Mahasiswa::all();
         return view('dosen.pengisian-nilai.index', compact('dosen', 'mhs'));
     }
+    
+    public function changeName(Request $request)
+    {
+        $dosen = Dosen::where('user_id', Auth::id())->first();
 
+        $request->validate([
+            'nama' => 'required',
+        ],[
+            'nama.required' => 'Name cannot be empty'
+        ]);
+
+        $dosen->update([
+            'nama' => $request->nama
+        ]);
+        return view('dosen.index', compact('dosen'));
+    }
 }
