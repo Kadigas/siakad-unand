@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Administrator;
 use App\Models\Dosen;
 use App\Models\Timeline;
 use Illuminate\Http\Request;
@@ -14,6 +15,10 @@ class TimelineController extends Controller
         $timeline = Timeline::all();
         if($dosen){
             return view('dosen.timeline.index', compact('dosen', 'timeline'));
+        }
+        $admin = Administrator::where('user_id', Auth::id())->first();
+        if($admin){
+            return view('admin.timeline.index', compact('admin', 'timeline'));
         }
     }
 }

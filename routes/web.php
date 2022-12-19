@@ -44,6 +44,8 @@ Route::get('/dosen/profile', [ProfileController::class, 'show'])->middleware('is
 Route::post('/dosen/edit_profile', [DosenController::class, 'changeName'])->middleware('isLogin');
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware('isLogin');
+Route::get('/admin/timeline', [TimelineController::class, 'index'])->middleware('isLogin');
+Route::get('/admin/pembagian', [ModulController::class, 'index'])->middleware('isLogin');
 
 Route::get('/session/login', [SessionController::class, 'login'])->middleware('isGuest');
 Route::post('/session/signin', [SessionController::class, 'signin']);

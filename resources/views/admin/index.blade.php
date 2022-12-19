@@ -1,21 +1,21 @@
 @extends('layouts.master')
 
 @section('nav')
-    @include('layouts.components.dosen.nav')
+    @include('layouts.components.admin.nav')
 @endsection
 @section('navdrawer')
     @push('styles')
         <link rel="stylesheet" href="{{asset('/css/components/navdrawer/Nav-drawer.css')}}">
     @endpush
-    @include('layouts.components.dosen.navdrawer')
+    @include('layouts.components.admin.navdrawer')
 @endsection
 
 @section('content')
     @push('styles')
-    <link rel="stylesheet" href="{{asset('/css/pages/main-dosen.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/pages/main-admin.css')}}">
     @endpush
     <div class='flex flex-row justify-center mt-12'>
-        <img src="{{asset('/images/Home-dosen.png')}}" alt="Home" width={800} height={800} class='mt-4'/>
+        <img src="{{asset('/images/Home-admin.png')}}" alt="Home" width={800} height={800} class='mt-4'/>
     </div>
     <div class='flex flex-row justify-center my-2'>
         <div class='card-content'>
@@ -32,5 +32,5 @@
     @push('styles')
         <link rel="stylesheet" href="{{asset('/css/components/activities/Activities.css')}}">
     @endpush
-    @include('layouts.components.dosen.activities')
+    @include('layouts.components.admin.activities')
 @endsection

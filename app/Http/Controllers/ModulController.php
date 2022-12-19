@@ -20,9 +20,9 @@ class ModulController extends Controller
         if($user){
             return view('dosen.modul');
         }
-        $user = Administrator::where('user_id', Auth::id())->first();
-        if($user){
-            return view('admin.modul');
+        $admin = Administrator::where('user_id', Auth::id())->first();
+        if($admin){
+            return view('admin.pembagian.index', compact('admin'));
         }
     }
 
